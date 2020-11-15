@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Basic Setup
 
-First of all, exectuing a virtual environment in api directory and install required packages.
+First of all, relocating to th project directory, exectuing a virtual environment in api directory and install required packages.
 ``` shell
 brew install yarn
 yarn
