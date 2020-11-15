@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 First of all, exectuing a virtual environment in api directory and install required packages.
 ``` shell
+brew install yarn
+yarn
 cd api
 python3 -m venv venv
 . venv/bin/activate
