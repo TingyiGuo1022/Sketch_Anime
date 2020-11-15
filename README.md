@@ -9,7 +9,7 @@ First of all, exectuing a virtual environment in api directory and install requi
 cd api
 python3 -m venv venv
 . venv/bin/activate
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Available Scripts
