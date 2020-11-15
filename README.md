@@ -13,6 +13,7 @@ python3 -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
 ```
+Then, you can use 'yarn start' and 'yarn start-flask' to start the frontend and backend of this project
 
 ## Available Scripts
 
