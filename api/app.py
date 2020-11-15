@@ -38,6 +38,14 @@ def get_color_image(color_points):
     plt.savefig("generated_images/color_image.jpg")
     plt.close()
 
+def generate_result_anime(sketch_data, color_data):
+    """ In this function, call the model stored in models directory to generate  anime character"""
+    ######TO DO###########
+    pass
+    ######################
+
+
+
 app = Flask(__name__)
 CORS(app)
 
