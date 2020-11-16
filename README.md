@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Basic Setup
+## How to start
 
 First of all, relocating to th project directory, exectuing a virtual environment in api directory and install required packages.
 ``` shell
@@ -14,6 +14,13 @@ python3 -m venv venv
 pip install -r requirements.txt
 ```
 Then, you can use 'yarn start' and 'yarn start-flask' to start the frontend and backend of this project
+```shell
+yarn start-flask
+```
+open another terminal
+```shell
+yarn start
+```
 
 ## Available Scripts
 
