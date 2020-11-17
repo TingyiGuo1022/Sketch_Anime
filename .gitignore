@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 venv
+Package-lock.json
 # testing
 /coverage
 
