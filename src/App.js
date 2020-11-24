@@ -10,6 +10,9 @@ class App extends Component {
     super(props)
     this.canvas = null
     this.handleSubmit = () => {
+      this.setState({
+        loading:true
+      })
       const user_drawing = this.canvas.save();
       console.log(user_drawing);
       fetch('http://127.0.0.1:5000/getImage/', {
@@ -24,6 +27,7 @@ class App extends Component {
       .then(res => {
         console.log(res);
         this.setState({
+          loading:false,
           imageUrl: URL.createObjectURL(res)
         });
       });
@@ -36,6 +40,7 @@ class App extends Component {
     }
     this.state = {
       resultHidden: false,
+      loading:false,
       imageUrl: "https://avatarfiles.alphacoders.com/116/116710.png"
     }
 
@@ -66,7 +71,11 @@ class App extends Component {
           </Grid>
           <Grid item xs={6}>
             {/* <Paper style={{ padding: 0 }} hidden={this.state.resultHidden}  > */}
-            <img src={this.state.imageUrl} style={{ height: 512, width: 512 }} hidden={this.state.resultHidden} />
+            {
+              this.state.loading ?
+                <Skeleton animation="wave" variant="rect" width={512} height={512} /> :
+                <img src={this.state.imageUrl} style={{ height: 512, width: 512 }} hidden={this.state.resultHidden} />
+            }
 
             {/* </Paper> */}
           </Grid>

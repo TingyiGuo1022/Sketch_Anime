@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from flask_cors import CORS
 import torch as nn
 from torchvision import transforms
+import time
 
 def process_data(jsonString):
     image_points = json.loads(jsonString)
@@ -66,6 +67,7 @@ def generate_anime():
     sketch_data = transform['sketch'](Image.open('generated_images/sketch_image.jpg').convert("L"))
     color_hint = process_color_data_array(Image.open('generated_images/color_image.jpg'), transform)
     # return {"sketch_data": sketch_data.shape, "color_hint": color_hint.shape}
+    time.sleep(2)
     return send_file('generated_images/sketch_image.jpg', mimetype='image/gif', as_attachment=True)
 
 
