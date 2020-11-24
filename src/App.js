@@ -27,6 +27,7 @@ class App extends Component {
       .then(res => {
         console.log(res);
         this.setState({
+          resultHidden: false,
           loading:false,
           imageUrl: URL.createObjectURL(res)
         });
@@ -36,12 +37,13 @@ class App extends Component {
     }
     this.handleClear = () => {
       this.canvas.clear();
-      this.setState({imageUrl: "https://avatarfiles.alphacoders.com/116/116710.png"});
+      this.setState({resultHidden: true, loading:false});
+      // this.setState({imageUrl: "https://avatarfiles.alphacoders.com/116/116710.png"});
     }
     this.state = {
       resultHidden: false,
       loading:false,
-      imageUrl: "https://avatarfiles.alphacoders.com/116/116710.png"
+      imageUrl: null
     }
 
   }
