@@ -68,7 +68,7 @@ def generate_anime():
     color_hint = process_color_data_array(Image.open('generated_images/color_image.jpg'), transform)
     # return {"sketch_data": sketch_data.shape, "color_hint": color_hint.shape}
     time.sleep(2)
-    return send_file('generated_images/result_2.jpg', mimetype='image/gif', as_attachment=True)
+    return send_file('generated_images/result.jpg', mimetype='image/gif', as_attachment=True)
 
 
 

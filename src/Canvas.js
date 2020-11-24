@@ -24,7 +24,7 @@ class Canvas extends React.Component {
         }
 
         this.changeColor = (color, sketch) => {
-            this.setState({ brushRadius: sketch ? 2 : 5, brushColor: sketch ? color : Color(color).fade(0.4) })
+            this.setState({ brushRadius: sketch ? 2 : 10, brushColor: sketch ? color : Color(color).fade(0.4) })
         }
 
     }

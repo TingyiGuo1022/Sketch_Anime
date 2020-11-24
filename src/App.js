@@ -37,7 +37,7 @@ class App extends Component {
     }
     this.handleClear = () => {
       this.canvas.clear();
-      this.setState({resultHidden: true, loading:false});
+      this.setState({resultHidden: true, loading:false, imageUrl: null});
       // this.setState({imageUrl: "https://avatarfiles.alphacoders.com/116/116710.png"});
     }
     this.state = {
